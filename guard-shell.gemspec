@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
-  s.name         = "guard-shell"
-  s.author       = "Joshua Hawxwell"
-  s.email        = "m@hawx.me"
-  s.summary      = "Guard gem for running shell commands"
-  s.homepage     = "http://github.com/hawx/guard-shell"
+  s.name         = 'guard-shell'
+  s.authors      = ['Joshua Hawxwell', 'Codruț Constantin Gușoi']
+  s.email        = 'mail+rubygems@codrut.pro'
+  s.summary      = 'Guard gem for running shell commands'
+  s.homepage     = 'http://github.com/sdwolfz/guard-shell'
   s.license      = 'MIT'
   s.version      = '0.7.2'
 
