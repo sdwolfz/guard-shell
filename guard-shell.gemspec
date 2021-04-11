@@ -1,6 +1,3 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path("../lib/guard/shell/version", __FILE__)
-
 Gem::Specification.new do |s|
   s.name         = "guard-shell"
   s.author       = "Joshua Hawxwell"
@@ -8,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary      = "Guard gem for running shell commands"
   s.homepage     = "http://github.com/hawx/guard-shell"
   s.license      = 'MIT'
-  s.version      = Guard::ShellVersion::VERSION
+  s.version      = '0.7.1'
 
   s.description  = <<-DESC
     Guard::Shell automatically runs shell commands when watched files are

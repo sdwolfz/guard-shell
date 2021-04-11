@@ -15,12 +15,20 @@ module Guard
 
     # Call #run_on_change for all files which match this guard.
     def run_all
-      run_on_modifications(Compat.matching_files(self, Dir.glob('{,**/}*{,.*}')))
+      available_watchers.each do |watcher|
+        output = watcher.call_action([])
+
+        run_on_modifications(output)
+      end
     end
 
     # Print the result of the command(s), if there are results to be printed.
     def run_on_modifications(res)
       $stdout.puts res if res
+    end
+
+    def available_watchers
+      watchers
     end
 
   end
