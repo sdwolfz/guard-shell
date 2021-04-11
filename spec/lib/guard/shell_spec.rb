@@ -21,7 +21,11 @@ RSpec.describe Guard::Shell do
     end
 
     it "delegates to run_on_modifications" do
-      expect($stdout).to receive(:puts).with(%w(bar))
+      watcher = double('watcher')
+      allow(watcher).to receive(:call_action).with([]).and_return('bar')
+
+      allow_any_instance_of(described_class).to receive(:available_watchers).and_return([watcher])
+      expect($stdout).to receive(:puts).with('bar')
       subject.run_all
     end
   end
