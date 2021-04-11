@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary      = "Guard gem for running shell commands"
   s.homepage     = "http://github.com/hawx/guard-shell"
   s.license      = 'MIT'
-  s.version      = '0.7.1'
+  s.version      = '0.7.2'
 
   s.description  = <<-DESC
     Guard::Shell automatically runs shell commands when watched files are
